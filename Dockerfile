@@ -6,7 +6,11 @@ WORKDIR /app
 COPY package*.json ./
 # RUN executa uma linha de comando no terminal enquanto o container está sendo criado, no nosso caso ele vai instalar as dependencias do package.json
 RUN npm install
+
+COPY ./src /app/src/
 # EXPOSE definimos a porta em que nossa aplicação vai rodar.
 EXPOSE 3000
+#ENTRYPOINT
+ENTRYPOINT [ "npm" ]
 # CMD é o comando que vai ser executado depois que o container for inicializado.
-CMD ["npm", "run", "dev"]
+CMD ["run", "dev"]
