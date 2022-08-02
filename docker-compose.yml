@@ -16,4 +16,4 @@ services:
       - ./:/app/
     # ports define o mapeamento de portas da aplicação sendo porta_interna:porta_externa.
     ports:
-      - "${PORT}:3000"
+      - "3000:3000"
