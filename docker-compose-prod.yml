@@ -9,6 +9,8 @@ services:
     # container_name é o nome do container
     container_name: exemplo_mentoria
     # restart pode ser: no, always, on-failure, unless-stopped
+    # command tem uma funcionalidade parecida com o CMD do dockerfile, é o comando default a ser executado quando iniciamos o container.
+    command: "start"
     restart: always
     # VOLUMES define  caminhos (diretórios) do servidor hospedeiro (host) que são mapeados com caminhos do container.
     # O volumes é apenas para mapear uma pasta no seu HD para uma outra pasta no container, promovendo uma ponte entre os dois mundos. Resolve por exemplo o problema quando executamos um banco no container, ao dar restart ele perde todas as informações do banco, mas, se ao criar realizarmos um bind da pasta do banco para uma pasta da nossa máquina, podemos deixar esses arquivos salvos mesmo reiniciando o container
@@ -16,7 +18,7 @@ services:
       - ./src/:/app/src/
     # ports define o mapeamento de portas da aplicação sendo porta_interna:porta_externa.
     ports:
-      - "3000:3000"
+      - "80:3000"
     environment:
       - PORT=3000
-      - ENVIROMENT=LOCAL
+      - ENVIROMENT=PRODUCTION
