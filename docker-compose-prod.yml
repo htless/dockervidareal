@@ -18,7 +18,7 @@ services:
       - ./src/:/app/src/
     # ports define o mapeamento de portas da aplicação sendo porta_interna:porta_externa.
     ports:
-      - "80:3000"
+      - "3001:3001"
     environment:
-      - PORT=3000
+      - PORT=3001
       - ENVIROMENT=PRODUCTION
