@@ -3,7 +3,7 @@ var app = express();
 require('dotenv').config();
 
 const port = process.env.PORT || 3000;
-const enviroment = process.env.ENVIROMENT;
+const enviroment = process.env.ENVIROMENT || "LOCAL";
 
 app.get('/', function(req, res) {
   res.send(`Olá turma 21 - Teste no ambiente ${enviroment}`);
