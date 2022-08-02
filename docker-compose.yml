@@ -7,7 +7,7 @@ services:
     # build é onde passamos o que vai ter dentro do nosso container, nesse caso vamos utilizar o . para indicar que são os arquivos desse diretório.
     build: .
     # container_name é o nome do container
-    container_name: exemplo_mentoria
+    container_name: exemplo_mentoria_local
     # restart pode ser: no, always, on-failure, unless-stopped
     restart: always
     # VOLUMES define  caminhos (diretórios) do servidor hospedeiro (host) que são mapeados com caminhos do container.
