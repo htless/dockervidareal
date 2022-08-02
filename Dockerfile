@@ -8,3 +8,5 @@ COPY package*.json ./
 RUN npm install
 # EXPOSE definimos a porta em que nossa aplicação vai rodar.
 EXPOSE 3000
+# CMD é o comando que vai ser executado depois que o container for inicializado.
+CMD ["npm", "run", "dev"]
